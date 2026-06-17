@@ -1,0 +1,215 @@
+# =====================================================================
+#  Datos del CV de Jaime Berdejo Sánchez
+#  Editar SOLO este archivo para actualizar los CVs.
+#  Después ejecutar:  python3 generate_cv.py
+#  → genera Jaime_Berdejo_CV.docx (EN) y Jaime_Berdejo_CV_ES.docx (ES)
+# =====================================================================
+
+# --- Datos personales (comunes a ambos idiomas) ---
+personal:
+  name: "Jaime Berdejo Sánchez"
+  phone: "+34 680 303 293"
+  email: "jaimeberdejo1902@gmail.com"
+  photo: "photo.jpg"   # ruta relativa al script
+
+# ---------------------------------------------------------------------
+# VERSIÓN EN INGLÉS
+# ---------------------------------------------------------------------
+en:
+  title: "Data & AI Engineer"
+  location: "Barcelona, Spain"
+
+  profile:
+    heading: "PROFILE"
+    text: >-
+      Computer Science graduate with a dual background in Business Administration
+      and a Master's in AI Applied to Financial Markets, combining engineering
+      depth with quantitative and business understanding. Hands-on experience
+      building production ETL pipelines on AWS and developing LLM-based
+      systems—from RAG and agentic applications to data-driven analytics
+      platforms. I take projects from concept to production, turning complex
+      problems into scalable, intelligent tools that deliver measurable impact.
+
+  education:
+    heading: "EDUCATION"
+    items:
+      - title: "Master's Degree in Artificial Intelligence Applied to Financial Markets"
+        institution: "University of Barcelona"
+        dates: "2025 – 2026"
+      - title: "Dual Bachelor's Degree in Computer Science & Business Administration"
+        institution: "University of Granada"
+        dates: "2019 – 2024"
+
+  experience:
+    heading: "PROFESSIONAL EXPERIENCE"
+    jobs:
+      - role: "Data Engineer"
+        company: "Indra Sistemas"
+        dates: "May 2025 – May 2026"
+        bullets:
+          - bold: "Data Warehouse Maintenance & Integrity:"
+            text: "Managed the division's Data Warehouse, monitoring internal databases to detect and resolve inconsistencies, and maintaining documentation that kept critical data accessible for the analytics team."
+          - bold: "ETL Pipeline Development:"
+            text: "Built and optimized data pipelines in Java and Python on AWS Glue and Apache Airflow, automating data flows that improved processing efficiency and reduced manual intervention in the reporting cycle."
+          - bold: "Cross-Functional Collaboration:"
+            text: "Partnered with data analysts to translate business requirements into robust technical implementations aligned with the team's data infrastructure roadmap."
+      - role: "IT Intern"
+        company: "Grupo Bersan"
+        dates: "Nov 2023 – May 2024"
+        bullets:
+          - bold: "Technical Support & Web Maintenance:"
+            text: "Resolved technical tickets for web change requests and IT operations, keeping internal tools and web platforms fully operational."
+          - bold: "Domain & Infrastructure Administration:"
+            text: "Administered company domains and DNS configuration, ensuring proper record propagation and security protocols and contributing to 100% service uptime."
+
+  skills:
+    heading: "TECHNICAL SKILLS"
+    groups:
+      - label: "Data Engineering & Cloud"
+        text: "AWS (Glue, S3, Lambda, EC2, EMR, IAM, SageMaker), Apache Airflow, dbt, PySpark, ETL/ELT automation, SQL (PostgreSQL, MySQL), NoSQL (MongoDB), Data Warehousing (Snowflake, Redshift, BigQuery), Schema design & optimization."
+      - label: "AI Engineering & GenAI"
+        text: "LangChain, LangGraph, Multi-agent system design, LLM integration (OpenAI, Claude, Gemini, Groq), RAG pipelines, Prompt engineering, Vector databases (pgvector)."
+      - label: "Automation & Agentic Workflows"
+        text: "Python automation & scripting, n8n (low-code workflow automation), autonomous & multi-agent systems, AI agent orchestration, task scheduling (cron), webhooks & API integrations, end-to-end process automation."
+      - label: "Programming & Backend"
+        text: "Python (Advanced), Java, SQL, Bash, FastAPI, Django, REST API design, Git (GitHub/GitLab), Docker, CI/CD (GitHub Actions)."
+      - label: "Data Science & Analytics"
+        text: "Pandas, NumPy, scikit-learn, XGBoost, PyTorch, Statistical modeling, Financial data analysis, Data visualization (Power BI, Tableau, Matplotlib)."
+
+  languages:
+    heading: "LANGUAGES"
+    items:
+      - label: "Spanish"
+        value: "Native"
+      - label: "English"
+        value: "Fluent (C1 — Advanced)"
+
+  projects:
+    heading: "SELECTED PROJECTS"
+    items:
+      - name: "FiscalPilot"
+        status: "Ongoing"
+        stack: "Python, FastAPI, LangGraph, Claude API, Supabase (Postgres + pgvector), Next.js, PSD2 (GoCardless)"
+        description: "Agentic SaaS acting as a virtual CFO for Spanish freelancers: connects to bank accounts via PSD2, automatically reserves taxes (IVA/IRPF), classifies expenses, and proposes investment of idle cash—all under human-in-the-loop approval and full auditability (GDPR, EU AI Act, MiFID II compliant). Built on a deterministic tax engine with an agentic LangGraph layer above for reasoning."
+      - name: "RAG for European Financial Regulation — Master's Thesis (TFM)"
+        status: "Ongoing"
+        stack: "Python, LangChain, vector databases, sentence-transformers, RAGAS, LLM APIs"
+        description: "Empirical study designing and evaluating Retrieval-Augmented Generation systems applied to the full hierarchy of European financial regulation (EU Regulations, RTS, ESMA Q&As, CNMV criteria). Building a modular RAG pipeline, releasing a public benchmark of validated reference Q&A pairs, and benchmarking chunking strategies, embedding models, and generator LLMs across standard retrieval metrics (Recall@k, MRR) and generation metrics (faithfulness, answer relevance) following the RAGAS framework and LegalBench-RAG methodology."
+      - name: "AutoVideo"
+        status: ""
+        stack: "Python, Typer, Claude API (Anthropic), ElevenLabs, Playwright, Jinja2, FFmpeg, WhisperX, Pydantic v2, Docker"
+        description: "Tool that fully automates the video-creation workflow: from a list of bullet points and a target duration, it produces a finished narrated slide video with zero manual editing. Orchestrates an end-to-end pipeline (LLM storyboard design → HTML/CSS slides rendered to PNG via Playwright → duration-calibrated voice-over script → ElevenLabs TTS or mic recording aligned with WhisperX → FFmpeg assembly with synchronized subtitles), all driven by code-defined SVG visuals (no stock or AI images). Exposes 4 automation levels (from stage-by-stage review to fully autonomous) and ships as a CLI with a dry-run cost estimator, plus a Dockerized build."
+      - name: "RoleRadar"
+        status: ""
+        stack: "Python, FastAPI, n8n, Streamlit, APScheduler, OpenAI (GPT-4o), BGE-M3 embeddings (sentence-transformers), Instructor, Pydantic v2, Docker Compose, Telegram"
+        description: "Autonomous job-matching radar that ingests raw postings from multiple job boards, normalizes and semantically deduplicates them, and honestly scores each one against my real profile—parsed directly from my CV PDF—via a hybrid heuristic fusing deterministic rules (role-ranking decay, seniority, location/remote, hard deal-breakers) with LLM judgment. Built around a single intelligent core shipped in two automation setups: (v1) the smart pieces run as a service while n8n handles the daily schedule, source ingestion, and digest delivery; (v2) a self-contained app that fetches, cleans, ranks, and pushes a Telegram/email digest on schedule with no human in the loop, behind a simple web UI. Scoring runs fully offline by default, with the LLM as an optional layer for written explanations—so it works end-to-end even without an API key."
+      - name: "FinFeed"
+        status: ""
+        stack: "Next.js, TypeScript, Python, Supabase, GitHub Actions, Groq (Llama 3.3 70B), OpenAI TTS, FFmpeg, faster-whisper"
+        description: "Autonomous multi-modal news pipeline that delivers AI-generated short-form videos twice daily across Finance and Tech categories. Engineered an end-to-end CI/CD pipeline (RSS ingestion → LLM script generation → TTS narration → animated subtitles → FFmpeg video synthesis → Supabase delivery) running in under 15 minutes with zero human intervention."
+      - name: "Florida Real Estate Price Prediction"
+        status: ""
+        stack: "Python, scikit-learn, XGBoost/LightGBM, Pandas, geospatial libraries"
+        description: "End-to-end ML pipeline for a Master's-level competition predicting Florida property prices on a dataset with ~60 features including JSON-nested attributes and geographic coordinates. Engineered domain-specific features (location clustering, property type encoding), benchmarked gradient boosting models, and optimized for MAE."
+
+# ---------------------------------------------------------------------
+# VERSIÓN EN ESPAÑOL  (actualizada para reflejar la versión en inglés)
+# ---------------------------------------------------------------------
+es:
+  title: "Ingeniero de Datos e IA"
+  location: "Barcelona, España"
+
+  profile:
+    heading: "PERFIL"
+    text: >-
+      Ingeniero Informático con doble titulación en Administración y Dirección
+      de Empresas y un Máster en Inteligencia Artificial Aplicada a los
+      Mercados Financieros, combinando una base técnica sólida con una visión
+      cuantitativa y de negocio. Cuento con experiencia práctica en el
+      desarrollo de pipelines ETL en producción sobre AWS y en sistemas
+      basados en LLMs, desde aplicaciones agénticas y RAG hasta plataformas
+      de analítica de datos. Llevo proyectos desde la idea hasta la
+      producción, transformando problemas complejos en herramientas
+      escalables e inteligentes con impacto medible.
+
+  education:
+    heading: "FORMACIÓN ACADÉMICA"
+    items:
+      - title: "Máster en Inteligencia Artificial Aplicada a los Mercados Financieros"
+        institution: "Universidad de Barcelona"
+        dates: "2025 – 2026"
+      - title: "Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas"
+        institution: "Universidad de Granada"
+        dates: "2019 – 2024"
+
+  experience:
+    heading: "EXPERIENCIA PROFESIONAL"
+    jobs:
+      - role: "Data Engineer"
+        company: "Indra Sistemas"
+        dates: "Mayo 2025 – Mayo 2026"
+        bullets:
+          - bold: "Mantenimiento e Integridad del Data Warehouse:"
+            text: "Gestioné el Data Warehouse de la división, monitorizando las bases de datos internas para detectar y resolver inconsistencias, y manteniendo la documentación que aseguraba el acceso a los datos críticos por parte del equipo de analítica."
+          - bold: "Desarrollo de Pipelines ETL:"
+            text: "Diseñé y optimicé pipelines de datos en Java y Python sobre AWS Glue y Apache Airflow, automatizando flujos que mejoraron la eficiencia de procesamiento y redujeron la intervención manual en el ciclo de reporting."
+          - bold: "Colaboración Interdepartamental:"
+            text: "Trabajé con analistas de datos para traducir requisitos de negocio en implementaciones técnicas robustas, alineadas con la hoja de ruta de la infraestructura de datos del equipo."
+      - role: "IT Intern"
+        company: "Grupo Bersan"
+        dates: "Nov. 2023 – Mayo 2024"
+        bullets:
+          - bold: "Soporte Técnico y Mantenimiento Web:"
+            text: "Resolví tickets técnicos de cambios en plataformas web y operaciones de IT, manteniendo las herramientas internas y plataformas web plenamente operativas."
+          - bold: "Administración de Dominios e Infraestructura:"
+            text: "Administré los dominios de la empresa y la configuración DNS, garantizando la propagación correcta de registros y los protocolos de seguridad, contribuyendo a un 100% de uptime del servicio."
+
+  skills:
+    heading: "COMPETENCIAS TÉCNICAS"
+    groups:
+      - label: "Ingeniería de Datos y Cloud"
+        text: "AWS (Glue, S3, Lambda, EC2, EMR, IAM, SageMaker), Apache Airflow, dbt, PySpark, automatización ETL/ELT, SQL (PostgreSQL, MySQL), NoSQL (MongoDB), Data Warehousing (Snowflake, Redshift, BigQuery), diseño y optimización de esquemas."
+      - label: "Ingeniería de IA y GenAI"
+        text: "LangChain, LangGraph, diseño de sistemas multi-agente, integración de LLMs (OpenAI, Claude, Gemini, Groq), pipelines RAG, prompt engineering, bases de datos vectoriales (pgvector)."
+      - label: "Automatización y Flujos Agénticos"
+        text: "Automatización y scripting con Python, n8n (automatización de flujos low-code), sistemas autónomos y multi-agente, orquestación de agentes de IA, programación de tareas (cron), webhooks e integraciones de APIs, automatización de procesos de extremo a extremo."
+      - label: "Programación y Backend"
+        text: "Python (avanzado), Java, SQL, Bash, FastAPI, Django, diseño de APIs REST, Git (GitHub/GitLab), Docker, CI/CD (GitHub Actions)."
+      - label: "Ciencia de Datos y Analítica"
+        text: "Pandas, NumPy, scikit-learn, XGBoost, PyTorch, modelado estadístico, análisis de datos financieros, visualización de datos (Power BI, Tableau, Matplotlib)."
+
+  languages:
+    heading: "IDIOMAS"
+    items:
+      - label: "Español"
+        value: "Nativo"
+      - label: "Inglés"
+        value: "Avanzado (C1)"
+
+  projects:
+    heading: "PROYECTOS DESTACADOS"
+    items:
+      - name: "FiscalPilot"
+        status: "En desarrollo"
+        stack: "Python, FastAPI, LangGraph, Claude API, Supabase (Postgres + pgvector), Next.js, PSD2 (GoCardless)"
+        description: "SaaS agéntico que actúa como un CFO virtual para autónomos en España: se conecta a las cuentas bancarias vía PSD2, reserva automáticamente los impuestos (IVA/IRPF), clasifica los gastos y propone la inversión del efectivo ocioso, todo bajo aprobación human-in-the-loop y plena auditabilidad (cumple RGPD, EU AI Act y MiFID II). Construido sobre un motor fiscal determinista con una capa agéntica de LangGraph por encima para el razonamiento."
+      - name: "RAG para Regulación Financiera Europea — Trabajo Fin de Máster (TFM)"
+        status: "En desarrollo"
+        stack: "Python, LangChain, bases de datos vectoriales, sentence-transformers, RAGAS, APIs de LLM"
+        description: "Estudio empírico que diseña y evalúa sistemas de Retrieval-Augmented Generation aplicados a la jerarquía completa de la regulación financiera europea (Reglamentos UE, RTS, Q&As de ESMA, criterios de la CNMV). Construyo un pipeline RAG modular, publico un benchmark abierto de pares pregunta-respuesta de referencia validados, y comparo estrategias de chunking, modelos de embedding y LLMs generadores sobre métricas estándar de recuperación (Recall@k, MRR) y de generación (faithfulness, answer relevance), siguiendo el framework RAGAS y la metodología LegalBench-RAG."
+      - name: "AutoVideo"
+        status: ""
+        stack: "Python, Typer, Claude API (Anthropic), ElevenLabs, Playwright, Jinja2, FFmpeg, WhisperX, Pydantic v2, Docker"
+        description: "Herramienta que automatiza por completo el workflow de creación de vídeos: a partir de una lista de bullet points y una duración objetivo, genera un vídeo final de slides narrado sin edición manual. Orquesta un pipeline de extremo a extremo (diseño de storyboard con LLM → slides en HTML/CSS renderizadas a PNG con Playwright → guion de voz en off calibrado a la duración → narración TTS con ElevenLabs o grabación de micro alineada con WhisperX → ensamblado con FFmpeg y subtítulos sincronizados), con visuales definidos por código mediante iconos SVG (sin imágenes de stock ni generadas por IA). Ofrece 4 niveles de automatización (desde revisión etapa por etapa hasta totalmente autónomo) y se distribuye como CLI con estimador de coste en dry-run y build dockerizado."
+      - name: "RoleRadar"
+        status: ""
+        stack: "Python, FastAPI, n8n, Streamlit, APScheduler, OpenAI (GPT-4o), embeddings BGE-M3 (sentence-transformers), Instructor, Pydantic v2, Docker Compose, Telegram"
+        description: "Radar autónomo de matching de empleo que ingiere ofertas en bruto de múltiples portales, las normaliza y deduplica semánticamente, y puntúa cada una de forma honesta frente a mi perfil real—extraído directamente del PDF de mi CV—mediante una heurística híbrida que fusiona reglas deterministas (decaimiento por ranking de roles, seniority, ubicación/remoto, deal-breakers excluyentes) con el juicio de un LLM. Construido en torno a un único núcleo inteligente desplegado en dos configuraciones de automatización: (v1) las piezas inteligentes corren como servicio mientras n8n gestiona la planificación diaria, la ingesta de fuentes y el envío del digest; (v2) una app autónoma que obtiene, limpia, ordena y envía un digest por Telegram/email de forma programada sin intervención humana, tras una interfaz web sencilla. La puntuación funciona totalmente offline por defecto, con el LLM como capa opcional para explicaciones escritas—de modo que funciona de extremo a extremo incluso sin una API key."
+      - name: "FinFeed"
+        status: ""
+        stack: "Next.js, TypeScript, Python, Supabase, GitHub Actions, Groq (Llama 3.3 70B), OpenAI TTS, FFmpeg, faster-whisper"
+        description: "Pipeline autónomo multimodal de noticias que genera y publica vídeos cortos generados por IA dos veces al día en las categorías de Finanzas y Tecnología. Diseñé un pipeline CI/CD de extremo a extremo (ingesta de RSS → generación de guion con LLM → narración TTS → subtítulos animados → síntesis de vídeo con FFmpeg → entrega en Supabase) que se ejecuta en menos de 15 minutos sin intervención humana."
+      - name: "Florida Real Estate Price Prediction"
+        status: ""
+        stack: "Python, scikit-learn, XGBoost/LightGBM, Pandas, librerías geoespaciales"
+        description: "Pipeline de Machine Learning de extremo a extremo para una competición a nivel de Máster de predicción de precios inmobiliarios en Florida sobre un dataset con ~60 variables, incluyendo atributos JSON anidados y coordenadas geográficas. Realicé ingeniería de variables específicas del dominio (clustering por ubicación, codificación de tipo de propiedad), comparé modelos de gradient boosting y optimicé el MAE."

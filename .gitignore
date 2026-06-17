@@ -1,0 +1,23 @@
+# Generated office documents (rebuild with generate_cv.py)
+*.docx
+*.pdf
+*.pages
+
+# Generated website (rebuilt by build_site.py / CI)
+/site/
+/docs/
+
+# Legacy export helper
+_export_pages.command
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ personal.name }} — CV</title>
+  <meta name="description" content="{{ en.title }} · {{ en.location }}">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Controls (hidden when printing) -->
+  <div class="controls no-print">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" class="active">EN</button>
+      <button type="button" data-set-lang="es">ES</button>
+    </div>
+    <button type="button" class="download-btn" onclick="window.print()">
+      ⬇ <span data-i18n="download">Download PDF</span>
+    </button>
+  </div>
+
+  {% macro contact(personal) %}
+    <div class="contact">
+      <span>{{ personal.phone }}</span>
+      <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+    </div>
+  {% endmacro %}
+
+  {% macro section(heading) %}
+    <h2 class="section-title">{{ heading }}</h2>
+  {% endmacro %}
+
+  {% macro cv_body(personal, d) %}
+    <header class="cv-header">
+      <div class="cv-header-text">
+        <h1 class="name">{{ personal.name }}</h1>
+        <p class="role">{{ d.title }}</p>
+        <p class="location">{{ d.location }}</p>
+        {{ contact(personal) }}
+      </div>
+      <div class="cv-header-photo">
+        <img src="{{ personal.photo }}" alt="{{ personal.name }}">
+      </div>
+    </header>
+
+    {# Profile #}
+    <section>
+      {{ section(d.profile.heading) }}
+      <p class="profile">{{ d.profile.text | trim }}</p>
+    </section>
+
+    {# Education #}
+    <section>
+      {{ section(d.education.heading) }}
+      {% for item in d.education['items'] %}
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">{{ item.title }}</span>
+            <span class="entry-dates">{{ item.dates }}</span>
+          </div>
+          <p class="entry-subtitle">{{ item.institution }}</p>
+        </div>
+      {% endfor %}
+    </section>
+
+    {# Experience #}
+    <section>
+      {{ section(d.experience.heading) }}
+      {% for job in d.experience.jobs %}
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title"><strong>{{ job.role }}</strong> — {{ job.company }}</span>
+            <span class="entry-dates">{{ job.dates }}</span>
+          </div>
+          <ul class="bullets">
+            {% for bullet in job.bullets %}
+              <li><strong>{{ bullet.bold }}</strong> {{ bullet.text }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </section>
+
+    {# Skills #}
+    <section>
+      {{ section(d.skills.heading) }}
+      {% for group in d.skills.groups %}
+        <p class="skill-group"><strong>{{ group.label }}:</strong> {{ group.text }}</p>
+      {% endfor %}
+    </section>
+
+    {# Languages #}
+    <section>
+      {{ section(d.languages.heading) }}
+      <p class="languages">
+        {% for item in d.languages['items'] %}
+          <span class="lang-item"><strong>{{ item.label }}:</strong> {{ item.value }}</span>
+        {% endfor %}
+      </p>
+    </section>
+
+    {# Projects #}
+    <section>
+      {{ section(d.projects.heading) }}
+      {% for proj in d.projects['items'] %}
+        <div class="project">
+          <p class="project-name">
+            {{ proj.name }}{% if proj.status %} <span class="project-status">— {{ proj.status }}</span>{% endif %}
+          </p>
+          <p class="project-stack"><strong>Stack:</strong> {{ proj.stack }}</p>
+          <p class="project-desc">{{ proj.description }}</p>
+        </div>
+      {% endfor %}
+    </section>
+  {% endmacro %}
+
+  <main class="page" id="cv">
+    <div class="cv-lang" data-lang="en">
+      {{ cv_body(personal, en) }}
+    </div>
+    <div class="cv-lang" data-lang="es" hidden>
+      {{ cv_body(personal, es) }}
+    </div>
+  </main>
+
+  <footer class="footer no-print">
+    Built from <code>cv_data.yml</code> · <a href="https://github.com/jaimeberdejo/CV_Generator">source</a>
+  </footer>
+
+  <script>
+    (function () {
+      var current = "en";
+      var i18n = { download: { en: "Download PDF", es: "Descargar PDF" } };
+
+      function setLang(lang) {
+        current = lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll(".cv-lang").forEach(function (el) {
+          el.hidden = el.getAttribute("data-lang") !== lang;
+        });
+        document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
+        });
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n");
+          if (i18n[key] && i18n[key][lang]) el.textContent = i18n[key][lang];
+        });
+      }
+
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setLang(btn.getAttribute("data-set-lang"));
+        });
+      });
+
+      setLang("en");
+    })();
+  </script>
+</body>
+</html>
