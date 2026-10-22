@@ -22,12 +22,12 @@ en:
   profile:
     heading: "PROFILE"
     text: >-
-      AI and agentic engineer. Computer Science graduate with a dual background in Business Administration
+      AI and Data Engineer. Computer Science graduate with a dual background in Business Administration
       and a Master's in AI Applied to Financial Markets, combining engineering
       depth with quantitative and business understanding. Hands-on experience
       building production ETL pipelines on AWS and developing LLM-based
       systems—from RAG and agentic applications to data-driven analytics
-      platforms. I take projects from concept to production, turning complex
+      platforms. I also practice agentic engineering, building software with AI coding agents. I take projects from concept to production, turning complex
       problems into scalable, intelligent tools that deliver measurable impact.
 
   education:
@@ -144,13 +144,14 @@ es:
   profile:
     heading: "PERFIL"
     text: >-
-      Ingeniero de IA y agentic engineer. Ingeniero Informático con doble titulación en Administración y Dirección
+      Ingeniero de IA y Datos. Ingeniero Informático con doble titulación en Administración y Dirección
       de Empresas y un Máster en Inteligencia Artificial Aplicada a los
       Mercados Financieros, combinando una base técnica sólida con una visión
       cuantitativa y de negocio. Cuento con experiencia práctica en el
       desarrollo de pipelines ETL en producción sobre AWS y en sistemas
       basados en LLMs, desde aplicaciones agénticas y RAG hasta plataformas
-      de analítica de datos. Llevo proyectos desde la idea hasta la
+      de analítica de datos. También practico agentic engineering, desarrollando
+      software con agentes de programación de IA. Llevo proyectos desde la idea hasta la
       producción, transformando problemas complejos en herramientas
       escalables e inteligentes con impacto medible.
 
