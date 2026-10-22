@@ -412,8 +412,8 @@ def build_cv(data: dict, lang: str) -> Document:
 
     build_header(doc, personal, lang_data)
     add_profile(doc, lang_data["profile"])
-    add_education(doc, lang_data["education"])
     add_experience(doc, lang_data["experience"])
+    add_education(doc, lang_data["education"])
     add_skills(doc, lang_data["skills"])
     add_languages(doc, lang_data["languages"])
     add_projects(doc, lang_data["projects"])

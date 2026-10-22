@@ -50,20 +50,6 @@
       <p class="profile">{{ d.profile.text | trim }}</p>
     </section>
 
-    {# Education #}
-    <section>
-      {{ section(d.education.heading) }}
-      {% for item in d.education['items'] %}
-        <div class="entry">
-          <div class="entry-head">
-            <span class="entry-title">{{ item.title }}</span>
-            <span class="entry-dates">{{ item.dates }}</span>
-          </div>
-          <p class="entry-subtitle">{{ item.institution }}</p>
-        </div>
-      {% endfor %}
-    </section>
-
     {# Experience #}
     <section>
       {{ section(d.experience.heading) }}
@@ -78,6 +64,20 @@
               <li><strong>{{ bullet.bold }}</strong> {{ bullet.text }}</li>
             {% endfor %}
           </ul>
+        </div>
+      {% endfor %}
+    </section>
+
+    {# Education #}
+    <section>
+      {{ section(d.education.heading) }}
+      {% for item in d.education['items'] %}
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">{{ item.title }}</span>
+            <span class="entry-dates">{{ item.dates }}</span>
+          </div>
+          <p class="entry-subtitle">{{ item.institution }}</p>
         </div>
       {% endfor %}
     </section>
