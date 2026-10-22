@@ -22,7 +22,7 @@ en:
   profile:
     heading: "PROFILE"
     text: >-
-      Computer Science graduate with a dual background in Business Administration
+      AI and agentic engineer. Computer Science graduate with a dual background in Business Administration
       and a Master's in AI Applied to Financial Markets, combining engineering
       depth with quantitative and business understanding. Hands-on experience
       building production ETL pipelines on AWS and developing LLM-based
@@ -90,7 +90,7 @@ en:
       - label: "Data Engineering & Cloud"
         text: "AWS (Glue, S3, Lambda, EC2, EMR, IAM, SageMaker), Apache Airflow, dbt, PySpark, ETL/ELT automation, SQL (PostgreSQL, MySQL), NoSQL (MongoDB), Data Warehousing (Snowflake, Redshift, BigQuery), Schema design & optimization."
       - label: "AI Engineering & GenAI"
-        text: "LangChain, LangGraph, Multi-agent system design, LLM integration (OpenAI, Claude, Gemini, Groq), RAG pipelines, Prompt engineering, Vector databases (pgvector)."
+        text: "LangChain, LangGraph, Multi-agent system design, LLMs and LLM integration (OpenAI, Claude, Gemini, Groq, OpenRouter), Agentic engineering (Claude, Codex, Cursor), RAG pipelines, Prompt engineering, Vector databases (pgvector)."
       - label: "Automation & Agentic Workflows"
         text: "Python automation & scripting, n8n (low-code workflow automation), autonomous & multi-agent systems, AI agent orchestration, task scheduling (cron), webhooks & API integrations, end-to-end process automation."
       - label: "Programming & Backend"
@@ -144,7 +144,7 @@ es:
   profile:
     heading: "PERFIL"
     text: >-
-      Ingeniero Informático con doble titulación en Administración y Dirección
+      Ingeniero de IA y agentic engineer. Ingeniero Informático con doble titulación en Administración y Dirección
       de Empresas y un Máster en Inteligencia Artificial Aplicada a los
       Mercados Financieros, combinando una base técnica sólida con una visión
       cuantitativa y de negocio. Cuento con experiencia práctica en el
@@ -214,7 +214,7 @@ es:
       - label: "Ingeniería de Datos y Cloud"
         text: "AWS (Glue, S3, Lambda, EC2, EMR, IAM, SageMaker), Apache Airflow, dbt, PySpark, automatización ETL/ELT, SQL (PostgreSQL, MySQL), NoSQL (MongoDB), Data Warehousing (Snowflake, Redshift, BigQuery), diseño y optimización de esquemas."
       - label: "Ingeniería de IA y GenAI"
-        text: "LangChain, LangGraph, diseño de sistemas multi-agente, integración de LLMs (OpenAI, Claude, Gemini, Groq), pipelines RAG, prompt engineering, bases de datos vectoriales (pgvector)."
+        text: "LangChain, LangGraph, diseño de sistemas multi-agente, LLMs e integración de LLMs (OpenAI, Claude, Gemini, Groq, OpenRouter), agentic engineering (Claude, Codex, Cursor), pipelines RAG, prompt engineering, bases de datos vectoriales (pgvector)."
       - label: "Automatización y Flujos Agénticos"
         text: "Automatización y scripting con Python, n8n (automatización de flujos low-code), sistemas autónomos y multi-agente, orquestación de agentes de IA, programación de tareas (cron), webhooks e integraciones de APIs, automatización de procesos de extremo a extremo."
       - label: "Programación y Backend"
